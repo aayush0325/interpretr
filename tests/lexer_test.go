@@ -1,6 +1,7 @@
-package lexer
+package tests
 
 import (
+	"interpretr/lexer"
 	"interpretr/token"
 	"testing"
 )
@@ -22,7 +23,6 @@ func TestNextToken(t *testing.T) {
 	}
 	10 == 10;
 	10 != 9;`
-
 	tests := []struct {
 		expectedType    token.TokenType
 		expectedLiteral string
@@ -103,7 +103,7 @@ func TestNextToken(t *testing.T) {
 		{token.EOF, ""},
 	}
 
-	l := New(input)
+	l := lexer.New(input)
 
 	for i, tt := range tests {
 		tok := l.NextToken()

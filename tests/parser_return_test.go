@@ -1,8 +1,9 @@
-package parser
+package tests
 
 import (
 	"interpretr/ast"
 	"interpretr/lexer"
+	"interpretr/parser"
 	"testing"
 )
 
@@ -13,9 +14,10 @@ func TestReturnStatements(t *testing.T) {
 	return 993322;
 	`
 	l := lexer.New(input)
-	p := New(l)
+	p := parser.New(l)
 	program := p.ParseProgram()
 	checkParserErrors(t, p)
+
 	if len(program.Statements) != 3 {
 		t.Fatalf("program.Statements does not contain 3 statements. got=%d", len(program.Statements))
 	}
