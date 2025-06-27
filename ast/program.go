@@ -1,5 +1,6 @@
 package ast
 
+// Implements the `Node` interface
 type Program struct {
 	Statements []Statement
 }

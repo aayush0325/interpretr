@@ -2,6 +2,7 @@ package ast
 
 import "interpretr/token"
 
+// Implements the `Statement` interface
 type LetStatement struct {
 	Token token.Token // let keyword
 	Name  *Identifier
@@ -11,6 +12,7 @@ type LetStatement struct {
 func (ls *LetStatement) statementNode()       {}
 func (ls *LetStatement) TokenLiteral() string { return ls.Token.Literal }
 
+// Implements the `Expression` interface
 type Identifier struct {
 	Token token.Token // the token.IDENT token
 	Value string
