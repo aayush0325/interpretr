@@ -25,3 +25,23 @@ func (rs *ReturnStatement) String() string {
 
 	return out.String()
 }
+
+/*
+
+EXAMPLE USAGE
+
+	&ast.ReturnStatement{
+		Token: token.Token{
+			Type:    token.RETURN,
+			Literal: "return",
+		},
+		ReturnValue: &ast.Identifier{
+			Token: token.Token{
+				Type:    token.IDENT,
+				Literal: "x",
+			},
+			Value: "x",
+		},
+	},
+
+*/

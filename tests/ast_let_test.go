@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestAST(t *testing.T) {
+func TestLetAST(t *testing.T) {
 
 	// Good demonstration of how the AST is constructed
 	program := &ast.Program{
