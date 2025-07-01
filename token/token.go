@@ -3,8 +3,8 @@ package token
 type TokenType string
 
 type Token struct {
-	Type    TokenType
-	Literal string
+	Type    TokenType // token type
+	Literal string    // value associated with that type
 }
 
 var keywords = map[string]TokenType{

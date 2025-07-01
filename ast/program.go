@@ -15,9 +15,11 @@ func (p *Program) TokenLiteral() string {
 	}
 }
 
+// Given a prograam, generate a standardized string
 func (p *Program) String() string {
 	var out bytes.Buffer
 
+	// For each statement in the statements array, call it's `String()` method and write it into the buffer
 	for _, s := range p.Statements {
 		out.WriteString(s.String())
 	}
